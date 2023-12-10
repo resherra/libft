@@ -1,15 +1,18 @@
-#include <ctype.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/10 16:00:04 by recherra          #+#    #+#             */
+/*   Updated: 2023/12/10 16:21:17 by recherra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 'a' && c <= 'z')
-        c -= 32;
-        return c;
-}
-
-int main()
-{
-    printf("%c\n", ft_toupper('!'));                   
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
