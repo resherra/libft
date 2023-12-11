@@ -13,7 +13,7 @@ ${NAME}: ${OBJ} # libft.a : ft_*.o
 
 #testing
 main:
-	gcc main.c libft.a -o app
+	${CC} ${CFLAGS} main.c libft.a && ./a.out
 
 #clean object files
 clean:
