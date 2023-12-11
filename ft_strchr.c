@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 15:59:33 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/11 21:34:34 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/11 21:37:17 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strchr(const char *str, int c)
 	}
 	
 
-	if (c == '\0')
+	if (ac == '\0')
 		return ((char *)(str + len));
 	
 	return NULL;
