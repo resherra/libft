@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 18:43:53 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/10 18:58:12 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/11 11:14:57 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		number = number * 10;
-		number = number + (*str - 48);
+		number *= 10;
+		number += (*str - 48);
 		str++;
 	}
 	if (sign == 1)
