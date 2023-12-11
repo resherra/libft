@@ -10,24 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strchr(const char *str, int c)
 {
-	int	len = (int)ft_strlen(str);
-	char *s = (char *)str;
-	char	ac = c;
+	int		len;
+	char	*s;
+	char	ac;
+
+	len = (int)ft_strlen(str);
+	s = (char *)str;
+	ac = c;
 	while (*s)
 	{
-		if ((unsigned char) *s == (unsigned char) ac)
-			return (char *)s;
+		if ((unsigned char)*s == (unsigned char)ac)
+			return ((char *)s);
 		s++;
 	}
-	
-
 	if (ac == '\0')
 		return ((char *)(str + len));
-	
-	return NULL;
+	return (NULL);
 }
