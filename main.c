@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 14:58:28 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/12 17:26:26 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/12 19:07:26 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,17 @@
 
 int	main(void)
 {
-	printf("\n\n\nmimic %s\n", ft_strrchr("jacakaf", 'z'));
-	printf("original %s\n", strrchr("jacakaf", 'z'));
-	return 0;
+	int a[5];
+	int b[5];
+	for (int i = 0; i < 5; i++)
+		a[i] = 5;
+	for (int i = 0; i < 5; i++)
+		b[i] = 5;
+	ft_bzero(b, 12);
+	bzero(a, 12);
+	for (int j = 0; j < 5; j++)
+		printf("%d ", a[j]);
+	printf("\n");
+	for (int k = 0; k < 5; k++)
+		printf("%d ", b[k]);
 }
