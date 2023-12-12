@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 18:40:06 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/12 19:04:37 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/12 19:39:49 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ size_t	ft_strlen(const char *s);
 // int		ft_atoi(const char *str);
 void	*ft_memset(void *b, int c, size_t len);
 // char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c);
-void	ft_bzero(void *s, size_t n);
+// char	*ft_strrchr(const char *s, int c);
+// void	ft_bzero(void *s, size_t n);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
+
 
 #endif
