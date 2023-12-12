@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 20:58:26 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/12 21:45:44 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/12 21:48:49 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	len = ft_strlen(str);
 	s = (unsigned char *)str;
 	ac = (unsigned char)c;
-	while (*s && n--)
+	while (*s && --n)
 	{
 		if (*s == ac)
 			return (s);
 		s++;
 	}
 	if (ac == '\0' && n != len)
-		return ((char *)(str + len));
+		return ((unsigned char *)(str + len));
 	return (NULL);
 }
