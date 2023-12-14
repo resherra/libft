@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 14:58:28 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/14 15:47:59 by recherra         ###   ########.fr       */
+/*   Created: 2023/12/13 17:01:48 by recherra          #+#    #+#             */
+/*   Updated: 2023/12/14 16:00:49 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-int main(void)
+void *ft_memcpy(void *dst, const void *src, size_t n)
 {
-	return 1;
+  size_t i;
+
+  i = 0;
+  while (i < n)
+  {
+    ((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+    i++;
+  }
+  return (dst);
 }
