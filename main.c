@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 14:58:28 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/15 16:16:42 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/15 17:49:55 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(void)
+int	main(void)
 {
-	const char *str = "hello jack";
-	printf("ORIGINAL \n%s\n", strdup(str));
-	printf("MIMIC \n%s\n", ft_strdup(str));
+	const char *s1 = "hello";
+	const char *s2 = "jack";
+	printf("\n%s\n", ft_strjoin(s1, s2));
 }

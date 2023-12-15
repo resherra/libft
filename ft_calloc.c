@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 14:45:45 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/15 16:02:57 by recherra         ###   ########.fr       */
+/*   Created: 2023/12/15 16:50:20 by recherra          #+#    #+#             */
+/*   Updated: 2023/12/15 17:40:12 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <stdlib.h>
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+void	*ft_calloc(size_t count, size_t size)
 {
-	int	i;
-	int	is_diff;
+	void	*dst;
 
-	i = 0;
-	if (!ft_strlen(to_find))
-		return ((char *)str);
-	while (str[i] && len)
-	{
-		if ((str[i] == to_find[0]) && ft_strlen(to_find) <= len)
-		{
-			is_diff = ft_strncmp(str + i, to_find, ft_strlen(to_find));
-			if (is_diff == 0)
-				return ((char *)(str + i));
-		}
-		i++;
-		len--;
-	}
-	return (NULL);
+	dst = malloc(count * size);
+	if (!dst)
+		return (NULL);
+	ft_bzero(dst, count * size);
+	return (dst);
 }
