@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 14:58:28 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/15 12:27:57 by recherra         ###   ########.fr       */
+/*   Created: 2023/12/14 16:33:14 by recherra          #+#    #+#             */
+/*   Updated: 2023/12/15 11:32:19 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-int main(void)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char src[] = "abcd";
-	char dest[] = "";
-	char src2[] = "abcd";
-	char dest2[] = "";
-
-	printf("\n\nORIGINAL\n");
-	printf("%lu", strlcpy(dest, src, sizeof dest));
-	printf("\n%s\n", dest);
-	printf("%s\n", src);
-	printf("\n\nMIMIC\n");
-	printf("%lu", ft_strlcpy(dest2, src2, sizeof dest2));
-	printf("\n%s\n", dest2);
-	printf("%s\n", src2);
+	if ((unsigned char *)dst >= (unsigned char *)src)
+	{
+		while (len--)
+			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
+	}
+	else
+		ft_memcpy(dst, src, len);
+	return (dst);
 }
