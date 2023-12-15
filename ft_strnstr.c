@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 14:45:45 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/15 15:59:44 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/15 16:01:05 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	int	is_diff;
 
 	i = 0;
-	if (ft_strlen(to_find) == 0)
+	if (!ft_strlen(to_find))
 		return ((char *)str);
 	while (str[i] && len)
 	{
