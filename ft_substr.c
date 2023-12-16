@@ -5,34 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 10:32:39 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/16 19:00:27 by recherra         ###   ########.fr       */
+/*   Created: 2023/12/16 19:04:03 by recherra          #+#    #+#             */
+/*   Updated: 2023/12/16 20:05:25 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-  size_t i;
-  size_t size;
-  char *sub;
+	char *str;
+	size_t i;
+	size_t size;
 
-  i = 0;
-  size = ft_strlen(s);
-  if (*s == 0 || (start) > (unsigned int)(size - 1))
-    return (strdup(""));
-  if (len <= size - start)
-    sub = malloc(len + 1);
-  else
-    sub = malloc((size - start) + 1);
-  if (!sub)
-    return (NULL);
-  while (i < len && s[start])
-    sub[i++] = s[start++];
-  sub[i] = 0;
-  return (sub);
+	size = ft_strlen(s);
+	if (*s == 0 || (start) > (unsigned int)(size - 1))
+		return ft_strdup("");
+	if (len <= (size - start))
+		str = malloc(len + 1);
+	else
+		str = malloc((size - start) + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while ((i < len) && s[i + start])
+	{
+		str[i] = s[start + i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }

@@ -6,20 +6,18 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 17:45:37 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/15 18:25:09 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/16 19:54:27 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	char	*res;
-	int		i;
-	int		j;
-	int		len;
+	char *res;
+	int i;
+	int j;
+	int len;
 
 	i = 0;
 	j = 0;

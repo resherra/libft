@@ -6,17 +6,16 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 14:45:45 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/15 16:02:57 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/16 19:54:44 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char *ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	int	i;
-	int	is_diff;
+	int i;
+	int is_diff;
 
 	i = 0;
 	if (!ft_strlen(to_find))

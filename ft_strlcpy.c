@@ -6,17 +6,15 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 11:38:10 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/15 12:32:25 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/16 19:54:34 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	len;
+	size_t i;
+	size_t len;
 
 	len = ft_strlen(src);
 	i = 0;
