@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 18:40:06 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/16 21:34:55 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/17 16:16:54 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+char *ft_strtrim(char const *s1, char const *set);
 
 #endif
