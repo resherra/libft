@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 14:58:28 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/16 21:45:38 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/17 12:26:20 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,14 @@
 int main(void)
 {
 	char *src = "hello";
-	char *dst = "jack";
+	char dst[20] = "hell";
 
-	printf("%zu\n", ft_strlcat(dst, src, 4));
+	printf("\nORIGINAL\n");
+	printf("%zu\n", strlcat(dst, src, sizeof dst));
 	printf("%s\n", dst);
+	printf("\nMIMIC\n");
+	char *src2 = "hello";
+	char dst2[20] = "hell";
+	printf("%zu\n", ft_strlcat(dst2, src2, sizeof dst));
+	printf("%s\n", dst2);
 }
