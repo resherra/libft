@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(void)
+int	main(void)
 {
 	char *src = "hello";
 	char dst[20] = "hell";

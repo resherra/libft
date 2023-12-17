@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *p;
-	unsigned char ch;
+	unsigned char	*p;
+	unsigned char	ch;
 
 	p = s;
 	ch = c;

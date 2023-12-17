@@ -6,14 +6,12 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 21:33:03 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/17 12:50:39 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/17 12:51:04 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// if dst longer than dstsize
-// return initial lenght of src + lenght of src
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
