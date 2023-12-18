@@ -14,7 +14,7 @@ ${NAME}: ${OBJ} # libft.a : ft_*.o
 #testing
 main:
 # ${CC} ${CFLAGS} main.c libft.a && ./a.out
-	${CC} ${CFLAGS} main.c ft_itoa.c && ./a.out
+	${CC} ${CFLAGS} -fsanitize=address main.c ft_strtrim.c ft_strlen.c ft_strdup.c ft_strchr.c && ./a.out
 #clean object files
 clean:
 	rm -rf ${OBJ}

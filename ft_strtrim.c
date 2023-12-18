@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:06:45 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/18 17:39:56 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/18 20:25:23 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,10 @@ char	*ft_strtrim(char const *s, char const *set)
 		return (NULL);
 	i = start(s, set);
 	j = end(s, set, ft_strlen(s), i);
-	size = j - i + 1;
+	if (ft_strlen(s) == 0)
+		size = (j - i);
+	else
+		size = (j - i) + 1;
 	ret = malloc(size + 1);
 	if (!ret)
 		return (NULL);
