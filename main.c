@@ -1,11 +1,7 @@
 #include "libft.h"
 
-int	main(void)
+int main(void)
 {
-	char	s1[];
-	char	*set;
-
-	s1[] = "heredouanhe";
-	set = "he";
-	printf("\n|%s|\n", ft_strtrim(s1, set));
+    printf("%s\n", ft_itoa(-2147483648));
+    // printf("%s\n", ft_itoa(1337));
 }
