@@ -1,7 +1,7 @@
 #include "libft.h"
 
-int main(void)
+int	main(void)
 {
-    printf("%s\n", ft_itoa(-2147483648));
-    // printf("%s\n", ft_itoa(1337));
+	printf("%s\n", ft_itoa(-2147483648));
+	// printf("%s\n", ft_itoa(1337));
 }

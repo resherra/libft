@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:42:12 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/18 19:55:55 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/18 19:56:48 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_len(int n)
 	return (len);
 }
 
-void	ft_cases(char *str, long nb, int len)
+void	ft_norm(char *str, long nb, int len)
 {
 	while (nb > 0)
 	{
@@ -65,6 +65,6 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 		nb = -nb;
 	}
-	ft_cases(str, nb, len);
+	ft_norm(str, nb, len);
 	return (str);
 }
