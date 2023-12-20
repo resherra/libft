@@ -1,4 +1,4 @@
-CC = gcc
+# CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 SRC = ${wildcard ft_*.c}
 OBJ = ${SRC:.c=.o}
@@ -14,7 +14,7 @@ ${NAME}: ${OBJ} # libft.a : ft_*.o
 #testing
 main:
 # ${CC} ${CFLAGS} main.c libft.a && ./a.out
-	${CC} ${CFLAGS} -fsanitize=address ft_putnbr_fd.c main.c && ./a.out
+	cc ${CFLAGS} libft.a main.c && ./a.out
 #clean object files
 clean:
 	rm -rf ${OBJ}
