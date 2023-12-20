@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:20:28 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/20 15:31:33 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/20 16:52:14 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,19 +60,23 @@ static char	*word(const char *s, char sep)
 	return (re);
 }
 
-void	ffree(char **re, int index)
+static void	*ffree(char **re, int index)
 {
-	while (index >= 0)
-		free(re[index--]);
+	int	i;
+
+	i = 0;
+	while (i < index)
+		free(re[i++]);
 	free(re);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		count;
 	char	**re;
-	int		i;
 	char	*wrd;
+	int		i;
 
 	i = 0;
 	count = count_words(s, c);
@@ -87,10 +91,7 @@ char	**ft_split(char const *s, char c)
 		{
 			wrd = word(s, c);
 			if (!wrd)
-			{
-				ffree(re, i);
-				return (NULL);
-			}
+				return (ffree(re, i));
 			re[i++] = wrd;
 		}
 		while (*s && !check_sep(*s, c))
