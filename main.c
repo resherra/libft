@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int main()
+int	main(void)
 {
-    ft_putnbr_fd(2, 1);
+	ft_putnbr_fd(2, 1);
 }
