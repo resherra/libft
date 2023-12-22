@@ -11,6 +11,8 @@ ${NAME}: ${OBJ} # libft.a : ft_*.o
 
 # ar rcs $@ ${OBJ} ==> $@ is an automatic variable that contains the target name.
 
+bonus: ${NAME}
+
 #testing
 main:
 # ${CC} ${CFLAGS} main.c libft.a && ./a.out
