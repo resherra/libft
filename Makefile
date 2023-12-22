@@ -16,7 +16,7 @@ bonus: ${NAME}
 #testing
 main:
 # ${CC} ${CFLAGS} main.c libft.a && ./a.out
-	cc ${CFLAGS} libft.a main.c && ./a.out
+	cc ${CFLAGS} -fsanitize=address ft_lstadd_front_bonus.c main.c && ./a.out
 #clean object files
 clean:
 	rm -rf ${OBJ}

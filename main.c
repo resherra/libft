@@ -1,6 +1,7 @@
 #include "libft.h"
 
-int	main(void)
+int main(void)
 {
-	ft_putnbr_fd(2, 1);
+    char *str = "hello";
+    printf("%s\n", ft_lstnew(str)->content);
 }
