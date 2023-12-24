@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:20:28 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/20 17:58:07 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/24 19:46:12 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	count = count_words(s, c);
-	re = malloc((count + 1) * sizeof(char *));
+	re = ft_calloc(count + 1, sizeof(char *));
 	if (!re)
 		return (NULL);
 	while (*s)
@@ -97,6 +97,5 @@ char	**ft_split(char const *s, char c)
 		while (*s && !check_sep(*s, c))
 			s++;
 	}
-	re[i] = NULL;
 	return (re);
 }

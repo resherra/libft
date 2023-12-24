@@ -2,36 +2,23 @@
 
 int main(void)
 {
-    t_list *root = malloc(sizeof(t_list));
-    t_list *new_node = malloc(sizeof(t_list));
-    if (!new_node)
-        exit(1);
-    if (!root)
-        exit(1);
+    t_list *root;
+    t_list *new;
+
+    root = malloc(sizeof(t_list));
     root->content = "hello";
-    root->next = NULL;
+    root->next = malloc(sizeof(t_list));
+    root->next->content = "jack";
+    root->next->next = NULL;
 
-    t_list *curr = root;
+    new = malloc(sizeof(t_list));
+    new->content = "joe";
+    printf("from main %p\n", root);
+    ft_lstadd_back(&root, new);
 
-    ft_lstadd_back(&curr, new_node);
-
-    while (curr != NULL)
+    while (root)
     {
-        printf("%s\n", curr->content);
-        curr = curr->next;
+        printf("%s\n", root->content);
+        root = root->next;
     }
 }
-
-// int main()
-// {
-//     t_list *root, *elem;
-
-//     root = malloc(sizeof(t_list));
-//     elem = malloc(sizeof(t_list));
-//     root->content = "hello";
-//     root->next = elem;
-//     root->next->content = "jack";
-//     root->next->next = NULL;
-
-//     printf("%d\n", ft_lstsize(root));
-// }

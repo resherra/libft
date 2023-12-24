@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/22 12:11:13 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/24 20:35:34 by recherra         ###   ########.fr       */
+/*   Created: 2023/12/24 19:01:46 by recherra          #+#    #+#             */
+/*   Updated: 2023/12/24 19:32:06 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// typedef struct s_list
-// {
-//     void *content;
-//     struct s_list *next;
-// } t_list;
-
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+t_list	*ft_lstlast(t_list *lst)
 {
-    t_list *curr;
+	if (!lst)
+		return (NULL);
 
-    curr = *lst;
-    if (*lst == NULL)
-    {
-        *lst = new;
-        return;
-    }
-    while (curr->next != NULL)
-        curr = curr->next;
-    curr->next = new;
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }
