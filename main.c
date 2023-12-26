@@ -1,13 +1,18 @@
 #include "libft.h"
 
+void    rem(void *str)
+{
+    free(str);
+}
+
 void up(void *str)
 {
     int i = 0;
-    // char *ptr = (char *)str;
+    char *ptr = (char *)str;
 
-    while (((char *)str)[i])
+    while (ptr[i])
     {
-        printf("%c\n", ((char *)str)[i]);
+        printf("%c\n", ptr[i]);
         i++;
     }
 }
@@ -16,12 +21,16 @@ int main(void)
 {
     t_list *root;
     void (*f)(void *);
+    void (*del)(void*);
 
     f = &up;
+    del = &rem;
     root = malloc(sizeof(t_list));
     root->content = "hello";
     root->next = malloc(sizeof(t_list));
     root->next->content = "jack";
     root->next->next = NULL;
-    ft_lstiter(root, f);
+
+
+    printf("%s\n", ft_lstmap(root, f, del)->content);
 }

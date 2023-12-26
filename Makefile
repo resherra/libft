@@ -16,7 +16,7 @@ bonus: ${NAME}
 #testing
 main:
 # ${CC} ${CFLAGS} main.c libft.a && ./a.out
-	cc ${CFLAGS} ft_lstiter_bonus.c main.c
+	cc ${CFLAGS} ft_lstmap_bonus.c main.c
 #clean object files
 clean:
 	rm -rf ${OBJ}
