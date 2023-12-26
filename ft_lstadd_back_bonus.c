@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 12:11:13 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/24 20:35:34 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/26 20:05:44 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list *curr;
+	t_list	*curr;
 
-    curr = *lst;
-    if (*lst == NULL)
-    {
-        *lst = new;
-        return;
-    }
-    while (curr->next != NULL)
-        curr = curr->next;
-    curr->next = new;
+	curr = *lst;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	while (curr->next != NULL)
+		curr = curr->next;
+	curr->next = new;
 }
