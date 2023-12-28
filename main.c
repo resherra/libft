@@ -1,36 +1,44 @@
 #include "libft.h"
 
-void    rem(void *str)
+void rem(void *str)
 {
     free(str);
 }
 
-void up(void *str)
+void *up(void *str)
 {
     int i = 0;
     char *ptr = (char *)str;
 
     while (ptr[i])
     {
-        printf("%c\n", ptr[i]);
+        // printf("%c\n", ptr[i]);
+        ptr[i] -= 32;
         i++;
     }
+    return ptr;
 }
 
 int main(void)
 {
     t_list *root;
-    void (*f)(void *);
-    void (*del)(void*);
+    void *(*f)(void *);
+    void (*del)(void *);
+
+    char str[] = "hello";
+    char str2[] = "jack";
 
     f = &up;
     del = &rem;
     root = malloc(sizeof(t_list));
-    root->content = "hello";
+    root->content = str;
     root->next = malloc(sizeof(t_list));
-    root->next->content = "jack";
+    root->next->content = str2;
     root->next->next = NULL;
 
-
-    printf("%s\n", ft_lstmap(root, f, del)->content);
+    while (root)
+    {
+        printf("%s\n", ft_lstmap(root, f, del)->content);
+        root = root->next;
+    }
 }
