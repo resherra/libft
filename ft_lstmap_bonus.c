@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 21:33:01 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/28 11:44:43 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/28 12:32:18 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,28 @@
 //  of the function ’f’. The ’del’ function is used to delete the content of
 // a node if needed.
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    t_list *ne;
-    t_list *ne_node;
+	t_list *ne;
+	t_list *ne_node;
+	void *ptr;
 
-    if (!lst || !f)
-        return NULL;
-    ne = NULL;
-    while (lst)
-    {
-        ne_node = ft_lstnew(f(lst->content));
-        if (!ne_node)
-        {
-            ft_lstclear(&ne, del);
-            return NULL;
-        }
-        ft_lstadd_back(&ne, ne_node);
-        lst = lst->next;
-    }
-    return ne;
+	ne = NULL;
+
+	if (!lst || !f || !del)
+		return (NULL);
+	while (lst)
+	{
+		ptr = f(lst->content);
+		ne_node = ft_lstnew(ptr);
+		if (!ne_node)
+		{
+			del(ptr);
+			ft_lstclear(&ne, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&ne, ne_node);
+		lst = lst->next;
+	}
+	return (ne);
 }
