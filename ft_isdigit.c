@@ -6,13 +6,11 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 15:59:04 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/10 16:20:28 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/28 16:53:55 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+    return (c >= '0' && c <= '9');
 }

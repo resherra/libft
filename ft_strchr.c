@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 15:59:33 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/16 19:54:21 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/31 16:39:12 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	int		len;
 	char	*s;
 	char	ac;
 
-	len = ft_strlen(str);
 	s = (char *)str;
 	ac = c;
 	while (*s)
@@ -28,6 +26,6 @@ char	*ft_strchr(const char *str, int c)
 		s++;
 	}
 	if (ac == '\0')
-		return ((char *)(str + len));
+        return s;
 	return (NULL);
 }

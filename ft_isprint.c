@@ -6,13 +6,11 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 15:59:08 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/10 16:20:35 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/28 16:55:23 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+int ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+    return (c >= 32 && c <= 126);
 }
