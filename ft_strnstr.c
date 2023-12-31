@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 14:45:45 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/16 19:54:44 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/31 19:40:14 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,25 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	int	i;
-	int	is_diff;
+	int		i;
+	int		is_diff;
+	size_t		tf_len;
+	char	*s;
+	char	*tf;
 
+	s = (char *)str;
+	tf = (char *)to_find;
+	tf_len = ft_strlen(tf);
 	i = 0;
-	if (!ft_strlen(to_find))
-		return ((char *)str);
-	while (str[i] && len)
+	if (!tf_len)
+		return (s);
+	while (s[i] && len)
 	{
-		if ((str[i] == to_find[0]) && ft_strlen(to_find) <= len)
+		if ((s[i] == tf[0]) && tf_len <= len)
 		{
-			is_diff = ft_strncmp(str + i, to_find, ft_strlen(to_find));
+			is_diff = ft_strncmp(s + i, tf, tf_len);
 			if (is_diff == 0)
-				return ((char *)(str + i));
+				return (s + i);
 		}
 		i++;
 		len--;
