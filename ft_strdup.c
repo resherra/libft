@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 16:02:35 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/31 20:20:07 by recherra         ###   ########.fr       */
+/*   Updated: 2023/12/31 20:23:34 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char *ft_strdup(const char *s1)
     i = 0;
     len = ft_strlen(s1);
     str = ft_calloc((len + 1), sizeof(char));
-    if (str == NULL)
+    if (!str)
         return (NULL);
     while (s1[i])
     {
