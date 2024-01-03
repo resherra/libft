@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 18:43:53 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/11 11:14:57 by recherra         ###   ########.fr       */
+/*   Updated: 2024/01/03 20:35:22 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,5 @@ int	ft_atoi(const char *str)
 		return (-number);
 	return (number);
 }
+
+
