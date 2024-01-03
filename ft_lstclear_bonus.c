@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: resherra <resherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 18:49:08 by recherra          #+#    #+#             */
-/*   Updated: 2024/01/02 21:38:14 by recherra         ###   ########.fr       */
+/*   Updated: 2024/01/03 18:30:54 by resherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 			free(ne);
 		}
 	}
-	*lst = NULL;
 }
