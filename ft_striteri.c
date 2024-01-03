@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: resherra <resherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 13:52:40 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/26 18:29:09 by recherra         ###   ########.fr       */
+/*   Updated: 2024/01/03 18:57:35 by resherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while (s[i])
 	{

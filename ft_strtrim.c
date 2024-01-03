@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: resherra <resherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:06:45 by recherra          #+#    #+#             */
-/*   Updated: 2024/01/01 11:09:35 by recherra         ###   ########.fr       */
+/*   Updated: 2024/01/03 18:40:18 by resherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_strtrim(char const *s, char const *set)
 
 	i = 0;
 	q = 0;
-	if (!(s))
+	if (!s || !set)
 		return (NULL);
 	i = start(s, set);
 	j = end(s, set, ft_strlen(s), i);
