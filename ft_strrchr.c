@@ -12,21 +12,21 @@
 
 #include "libft.h"
 
-char *ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-    int len;
-    char *s;
-    char ac;
+	int		len;
+	char	*s;
+	char	ac;
 
-    len = ft_strlen(str);
-    s = (char *)str;
-    ac = c;
-    if (ac == '\0')
-        return (s + len);
-    while (len--)
-    {
-        if (ac == str[len])
-            return (s + len);
-    }
-    return (NULL);
+	len = ft_strlen(str);
+	s = (char *)str;
+	ac = c;
+	if (ac == '\0')
+		return (s + len);
+	while (len--)
+	{
+		if (ac == str[len])
+			return (s + len);
+	}
+	return (NULL);
 }

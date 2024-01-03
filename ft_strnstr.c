@@ -16,7 +16,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
 	int		i;
 	int		is_diff;
-	size_t		tf_len;
+	size_t	tf_len;
 	char	*s;
 	char	*tf;
 
