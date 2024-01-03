@@ -6,12 +6,11 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:29:34 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/15 17:49:49 by recherra         ###   ########.fr       */
+/*   Updated: 2024/01/03 10:43:40 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {
