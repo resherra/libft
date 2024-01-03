@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 18:49:08 by recherra          #+#    #+#             */
-/*   Updated: 2023/12/26 20:17:09 by recherra         ###   ########.fr       */
+/*   Updated: 2024/01/02 21:38:14 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *curr;
 	t_list *ne;
 
-	curr = *lst;
 
 	if (!lst || !del)
 		return ;
 	if (*lst)
 	{
-		while (curr)
+		while (*lst)
 		{
-			ne = curr;
-			curr = curr->next;
+			ne = *lst;
+			*lst = (*lst)->next;
 			del(ne->content);
 			free(ne);
 		}
