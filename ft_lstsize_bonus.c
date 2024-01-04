@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 11:07:48 by recherra          #+#    #+#             */
-/*   Updated: 2024/01/03 10:51:57 by recherra         ###   ########.fr       */
+/*   Updated: 2024/01/04 21:43:17 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int i = 0;
-	while (lst != NULL)
+	int	i;
+
+	i = 0;
+	while (lst)
 	{
-		i++;
 		lst = lst->next;
+		i++;
 	}
 	return (i);
 }

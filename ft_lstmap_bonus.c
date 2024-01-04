@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 21:33:01 by recherra          #+#    #+#             */
-/*   Updated: 2024/01/03 10:57:49 by recherra         ###   ########.fr       */
+/*   Updated: 2024/01/04 21:34:07 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *ne;
-	t_list *ne_node;
-	void *ptr;
+	t_list	*ne;
+	t_list	*ne_node;
+	void	*ptr;
 
 	ne = NULL;
-
 	if (!lst || !f || !del)
 		return (NULL);
 	while (lst)
