@@ -6,7 +6,7 @@
 /*   By: resherra <resherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:20:28 by recherra          #+#    #+#             */
-/*   Updated: 2024/01/04 21:45:05 by recherra         ###   ########.fr       */
+/*   Updated: 2024/01/05 16:02:17 by resherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ static void	*ffree(char **re, int index)
 
 char	**ft_split(char const *s, char c)
 {
-	int		count;
 	char	**re;
 	char	*wrd;
 	int		i;
@@ -78,8 +77,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	i = 0;
-	count = count_words(s, c);
-	re = ft_calloc(count + 1, sizeof(char *));
+	re = ft_calloc((count_words(s, c)) + 1, sizeof(char *));
 	if (!re)
 		return (NULL);
 	while (*s)
