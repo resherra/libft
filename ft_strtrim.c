@@ -6,7 +6,7 @@
 /*   By: resherra <resherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:06:45 by recherra          #+#    #+#             */
-/*   Updated: 2024/01/03 18:40:18 by resherra         ###   ########.fr       */
+/*   Updated: 2024/01/05 23:22:49 by resherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static int	start(char const *s, char const *set)
 
 static int	end(char const *s, char const *set, int len, int i)
 {
+	len--;
 	while (len >= 0 && i < len)
 	{
 		if (!ft_strchr(set, s[len]))
