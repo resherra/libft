@@ -6,7 +6,7 @@
 /*   By: recherra <recherra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 20:25:56 by recherra          #+#    #+#             */
-/*   Updated: 2024/01/04 21:42:16 by recherra         ###   ########.fr       */
+/*   Updated: 2024/01/06 15:41:48 by recherra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;
 
-	node = malloc(sizeof(t_list));
+	node = ft_calloc(1, sizeof(t_list));
 	if (!node)
 		return (NULL);
 	node->content = content;
